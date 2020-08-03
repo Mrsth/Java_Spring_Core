@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+        
+    <!-- Write bean definition right here -->
+    <bean id="flour" class="autowire_byName.Flour">
+    	<property name="flour_color" value="white"/>
+    </bean>
+    <bean id="cream" class="autowire_byName.Cream">
+    	<property name="cream_color" value="brown"/>
+    </bean>
+    <bean id="knife" class="autowire_byName.Knife"/>
+    
+    <bean id="cake" class="autowire_byName.Cake" autowire="byName"/>
+</beans>    
